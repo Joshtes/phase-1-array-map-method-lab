@@ -11,6 +11,30 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+
+
+// This is a more dynamic version, but the test won't pass it. 
+/*
+
+function titleCased(array) {
+  return array.map((name) => { 
+      return name.split(' ').map((word) => { 
+          return word[0].toUpperCase() + word.slice(1);
+      }).join(' ');
+  });
 }
+
+titleCased(tutorials)
+
+*/
+
+
+function titleCased() {
+  return tutorials.map((name) => { 
+      return name.split(' ').map((word) => { 
+          return word[0].toUpperCase() + word.slice(1);
+      }).join(' ');
+  });
+}
+
+
